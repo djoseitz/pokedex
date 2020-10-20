@@ -1,3 +1,4 @@
+//Pokemon list
 let pokemonList = [
     {
         name: 'Pikachu', 
@@ -21,16 +22,18 @@ let pokemonList = [
     }
 ];
 
-//Lists pokemon
+//Displays pokemon
 for (let i = 0; i < pokemonList.length; i++) {
     //displays "Wow that's big!" if pokemon over 2m high
     if (pokemonList[i].height > 2) {
-        document.write(pokemonList[i].name + 
-            " (height: " + pokemonList[i].height + ") - Wow that's big!");
+        document.write(`<div class="pokemon">${pokemonList[i].name} 
+        (height: ${pokemonList[i].height}) - 
+        Wow that's big!</div>`);
         }
     //displays rest of pokemon without "Wow that's big!" message
     else {
-        document.write(pokemonList[i].name + 
-            " (height: " + pokemonList[i].height + ")");
+        document.write(`<div class="pokemon">${pokemonList[i].name} 
+        (height: ${pokemonList[i].height})
+        </div>`);
         }
     }
