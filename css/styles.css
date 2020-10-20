@@ -1,0 +1,10 @@
+h1 {
+    color: white;
+    background-color: green;
+    padding-left: 10px;
+}
+
+.pokemon {
+    line-height: 30px;
+    padding-left: 10px;
+}
