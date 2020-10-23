@@ -28,7 +28,12 @@ let pokemonRepository = (function () {
     }
 
     function add(pokemon) {
-        pokemonList.push(pokemon);
+        if (typeof Object) {
+            pokemonList.push(pokemon);
+        }
+        else {
+            console.log('Invalid Pokemon')
+        }
     }
 
     return {
