@@ -28,11 +28,11 @@ let pokemonRepository = (function () {
     }
 
     function add(pokemon) {
-        if (typeof Object) {
+        if (typeof pokemon === 'object') {
             pokemonList.push(pokemon);
         }
         else {
-            console.log('Invalid Pokemon')
+            alert('Invalid Pokemon')
         }
     }
 
