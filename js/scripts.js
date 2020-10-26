@@ -36,12 +36,24 @@ let pokemonRepository = (function () {
         }
     }
 
+    //Logs pokemon info on click (see below)
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
+
+//Create pokemon list
     function addListItem(pokemon) {
+        //Creates list
         let pokemonList = document.querySelector('.pokemon-list');
         let listitem = document.createElement('li');
+        //Creates buttons
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         button.classList.add('pokebutton');
+        button.addEventListener('click', function() {
+            showDetails(pokemon)
+        });
         listitem.appendChild(button);
         pokemonList.appendChild(listitem);
     }
@@ -56,16 +68,3 @@ let pokemonRepository = (function () {
 pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
 })
-
-/*
-pokemonRepository.getAll().forEach(function(pokemon) {
-    if (pokemon.height > 2) {
-        document.write(`<div class="pokemon">${pokemon.name}  
-            (${pokemon.height}m) - Wow that's big!</div>` )
-    }
-    else {
-        document.write(`<div class="pokemon">${pokemon.name}  
-        (${pokemon.height}m)</div>` )
-    }
-})
-*/
