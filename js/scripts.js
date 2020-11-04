@@ -33,17 +33,33 @@ let pokemonRepository = (function () {
       /*pokemon name in modal */
       titleElement.innerText = pokemon.name;
 
-      let contentElement = document.createElement('p');
-      /*pokemon details */
-      contentElement.innerText = pokemon.height;
-      //TODO: add image and other details here
+      /* pokemon details */
+      let pokemonHeight = document.createElement('p');
+      pokemonHeight.innerText = `Height: ${pokemon.height}`;
+      
+      /* TODO figure out how to make this work
+      pokemon.types.forEach((type) => {
+        let pokemonType = document.createElement('p');
+          pokemonType.innerText = type;
+        modal.appendChild(pokemonType);
+      });
+      */
+
+      /*pokemon image */
+      let imgElement = document.createElement('img');
+      imgElement.classList.add('pokemon-img');
+      imgElement.src = pokemon.imageUrl;
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
-      modal.appendChild(contentElement);
+      modal.appendChild(pokemonHeight);
+      modal.appendChild(imgElement);
       modalContainer.appendChild(modal);
+
+
+
       
-      document.addEventListener('keydown', (e) => {
+      window.addEventListener('keydown', (e) => {
         console.log(e)
         if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
           hideModal();  
