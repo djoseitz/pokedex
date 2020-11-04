@@ -86,14 +86,28 @@ h1 {
     -webkit-appearance: none;
     border: 0;
     background: none;
-    color: #777;
+    color: white;
     text-decoration: underline;
+    padding: 10px;
+}
+
+.modal-close:hover {
+    background: black;
+    cursor: pointer;
 }
   
 .modal h1 {
     margin-top: 0;
+    text-transform: capitalize;
 }
   
 .modal p {
     margin-bottom: 0;
+    float: left;
+    padding-left: 10px;
+}
+
+.pokemon-img {
+    padding-right: 55px;
+    float: right;
 }
