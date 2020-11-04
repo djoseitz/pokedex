@@ -35,15 +35,7 @@ let pokemonRepository = (function () {
 
       /* pokemon details */
       let pokemonHeight = document.createElement('p');
-      pokemonHeight.innerText = `Height: ${pokemon.height}`;
-      
-      /* TODO figure out how to make this work
-      pokemon.types.forEach((type) => {
-        let pokemonType = document.createElement('p');
-          pokemonType.innerText = type;
-        modal.appendChild(pokemonType);
-      });
-      */
+      pokemonHeight.innerText = `Height: ${pokemon.height}`;   
 
       /*pokemon image */
       let imgElement = document.createElement('img');
@@ -55,6 +47,12 @@ let pokemonRepository = (function () {
       modal.appendChild(pokemonHeight);
       modal.appendChild(imgElement);
       modalContainer.appendChild(modal);
+
+      pokemon.types.forEach((typeObject) => {
+        let pokemonType = document.createElement('p');
+          pokemonType.innerText = typeObject.type.name;
+        modal.appendChild(pokemonType);
+      });
 
 
 
