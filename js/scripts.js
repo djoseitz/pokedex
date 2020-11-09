@@ -44,6 +44,51 @@ let pokemonRepository = (function () {
       modayBody.append(pokemonType);
     }
 
+  //Create pokemon list
+  function addListItem(pokemon) {
+    //Creates list
+    let pokemonList = document.querySelector('.list-group');
+    let listitem = document.createElement('li');
+    listitem.classList.add('group-list-item');
+    //Creates buttons
+    let button = document.createElement('button');
+    button.classList.add('btn');
+    button.innerText = pokemon.name;
+    button.setAttribute("data-toggle", "modal");
+    button.setAttribute("data-target", "#exampleModal")
+    listitem.appendChild(button);
+    pokemonList.appendChild(listitem);
+  }
+  
+  function LoadList() {
+      return fetch('https://pokeapi.co/api/v2/pokemon/?limit=150').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        json.results.forEach(function (item) {
+          let pokemon = {
+            name: item.name,
+            detailsUrl: item.url
+          };
+          add(pokemon);
+        });
+      }).catch(function (e) {
+        console.error(e);
+      })
+    }
+
+    function loadDetails(item) {
+      let url = item.detailsUrl;
+      return fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (details) {
+        // Now we add the details to the item
+        item.imageUrl = details.sprites.front_default;
+        item.height = details.height;
+        item.types = details.types;
+      }).catch(function (e) {
+        console.error(e);
+      });
+
   return {
       getAll: getAll,
       add: add,
