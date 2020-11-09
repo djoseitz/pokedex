@@ -1,21 +1,38 @@
+body {
+    background-color: #9ad3bc;
+}
+
+h1 {
+    background-color: #ec524b;
+    color: white;
+    padding: 10px;
+}
+
+.list-group {
+    text-align: center;
+}
+
 .pokemon {
     line-height: 30px;
     padding-left: 10px;
 }
 
 .btn {
-    background-color: green;
-    color: white;
+    background-color: #f3eac2;
+    /* color: white; */
     text-transform: capitalize;
-    margin: 2px;
-    width: 125px;
+    margin: 4px 2px;
+    width: 200px;
+    font-size: 18px;
+    padding: 16px 32px;
+
 }
 
 .btn:hover {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
-    background-color: white;
+    background-color: #f5b461;
     color: black;
     border: 2px solid green;
 }
@@ -29,19 +46,29 @@
     h1 {
         text-align: center;
     }
-    .list-groupt {
+    .list-group {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 }
 
+.modal-header {
+    background-color: #ec524b;
+}
+
 .modal-title {
     text-transform: capitalize;
+    color: white;
 }
 
 .modal-img {
     display:block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 50px;
+}
+
+.modal-body {
+    text-transform: capitalize;
 }
