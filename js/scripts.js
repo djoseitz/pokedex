@@ -31,7 +31,7 @@ let pokemonRepository = (function () {
     listitem.append(button);
     pokemonList.append(listitem);
 
-    $('button').on('click', function(event) {
+    button.addEventListener('click', function() {
       showDetails(pokemon);
     });
   }
