@@ -1,32 +1,17 @@
-h1 {
-    color: white;
-    background-color: green;
-    padding-left: 10px;
-}
-
 .pokemon {
     line-height: 30px;
     padding-left: 10px;
 }
 
-.pokemon-list {
-    list-style-type: none;
-}
-
-.pokebutton {
+.btn {
     background-color: green;
     color: white;
-    padding: 10px;
-    margin: 2px;
-    width: 150px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
     text-transform: capitalize;
+    margin: 2px;
+    width: 125px;
 }
 
-.pokebutton:hover {
+.btn:hover {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -35,18 +20,27 @@ h1 {
     border: 2px solid green;
 }
 
+.btn-secondary {
+    background-color: rgb(48, 47, 47);
+    color: white;
+}
+
 @media all and (max-width: 500px) {
     h1 {
         text-align: center;
     }
-    .pokemon-list {
+    .list-groupt {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 }
 
-.pokemon-img {
+.modal-title {
+    text-transform: capitalize;
+}
+
+.modal-img {
     padding-right: 55px;
     float: right;
 }
