@@ -66,7 +66,10 @@ let pokemonRepository = (function () {
         // Now we add the details to the item
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.types = details.types;
+        item.types = [];
+          details.types.forEach((typeObject) => {
+              item.types.push(typeObject.type.name)
+          });
       }).catch(function (e) {
         console.error(e);
       });
@@ -103,14 +106,8 @@ function showModal(pokemon) {
   let pokemonHeight = $("<p>" + "Height: " + pokemon.height + "</p>");
   let pokemonType = $("<p>" + "Types: " + pokemon.types + "</p>");
 
-  pokemon.types.forEach((typeObject) => {
-    let pokemonType = document.createElement('p');
-      pokemonType.innerText = typeObject.type.name;
-    modalBody.append(pokemonType);
-  });
-
   modalTitle.append(nameElement);
   modalBody.append(imageElement);
   modalBody.append(pokemonHeight);
-  modayBody.append(pokemonType);
+  modalBody.append(pokemonType);
 }
