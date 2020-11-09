@@ -41,6 +41,7 @@
 }
 
 .modal-img {
-    padding-right: 55px;
-    float: right;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
 }
