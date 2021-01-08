@@ -3,6 +3,15 @@ h1 {
     padding-left: 10px;
 }
 
+.navbar-toggler {
+  padding: .25rem .75rem;
+  font-size: 1.25em;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
 .pokemon {
     line-height: 30px;
     padding-left: 10px;
