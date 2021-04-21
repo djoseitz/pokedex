@@ -1,6 +1,6 @@
 # Pokédex
 
-### Pokédex application, built with Javascript, fetches data from an external API (Pokédex.com), and styled with CSS.
+Pokédex application, built with Javascript, fetches data from an external API (Pokédex.com), and styled with CSS.
 
 ## User Story Feature 1: As a user, I should be able to scroll through Pokémon by name and click on title box for more information.
 
