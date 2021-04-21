@@ -1,101 +1,107 @@
 body {
-    background-color: #9ad3bc;
+  background-color: #9ad3bc;
 }
 
 .navbar {
-    background-color: #ec524b;
-    padding: 10px;
+  background-color: #ec524b !important;
+  padding: 10px;
 }
 
 .navbar img {
-    margin: 5px;
+  margin: 5px;
 }
 
 .navbar-brand {
-    color: white;
+  color: white !important;
 }
 
 .navbar-brand:hover {
-    color: black;
+  color: black;
 }
 
 .nav-link {
-    color: white;
+  color: white;
 }
 
 .nav-link:hover {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 
 .list-group {
-    text-align: center;
-    margin-top: 80px;
+  text-align: center;
+  margin-top: 80px;
 }
 
 .pokemon {
-    line-height: 30px;
-    padding-left: 10px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.card-title {
+  text-transform: capitalize;
+}
+
+.card-img-top {
+  padding-top: 20px;
 }
 
 .btn {
-    background-color: #f3eac2;
-    /* color: white; */
-    text-transform: capitalize;
-    margin: 4px 2px;
-    width: 200px;
-    font-size: 18px;
-    padding: 16px 32px;
-
+  background-color: #f3eac2;
+  /* color: white; */
+  text-transform: capitalize;
+  margin: 4px 2px;
+  width: 200px;
+  font-size: 18px;
+  padding: 16px 32px;
 }
 
 .btn:hover {
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: #f5b461;
-    color: black;
-    border: 2px solid green;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #f5b461;
+  color: black;
+  border: 2px solid green;
 }
 
 .btn-secondary {
-    background-color: rgb(48, 47, 47);
-    color: white;
+  background-color: rgb(48, 47, 47);
+  color: white;
 }
 
 @media all and (max-width: 500px) {
-    h1 {
-        text-align: center;
-    }
-    .list-group {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
+  h1 {
+    text-align: center;
+  }
+  .list-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-.modal-header {
-    background-color: #ec524b;
-}
+/* .modal-header {
+  background-color: #ec524b;
+} */
 
 .modal-title {
-    text-transform: capitalize;
-    color: white;
+  text-transform: capitalize;
+  color: white;
 }
 
 .modal-img {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 50px;
-    width: 100%
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
 }
 
 .modal-body {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .about-content {
-    margin-top: 80px;
-    margin-left: 20px;
+  margin-top: 80px;
+  margin-left: 20px;
 }
