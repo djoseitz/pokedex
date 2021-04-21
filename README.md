@@ -1,5 +1,5 @@
 #Pokédex
-Pokédex application, built with Javascript, fetches data from an external API (Pokédex.com), and styled with Bootstrap.
+Pokédex application, built with Javascript, fetches data from an external API (Pokédex.com), and styled with CSS.
 
 ##User Story Feature 1:
 As a user, I should be able to scroll through Pokémon by name and click on title box for more information.
@@ -9,8 +9,8 @@ As a user, I should be able to scroll through Pokémon by name and click on titl
 > Then a modal will appear with details on that Pokémon
 
 ##User Story Feature 2:
-As a user, I should be able to be able to access the original API source if I wanted more information.
+As a user, I should be able to be able to search for a specific Pokémon
 
 > Given the user has loaded the app
-> When the user clicks on the Pokédex link in the header
-> Then the user will be redirected to Pokédex.com
+> When the user types the name of a Pokémon in the Search bar
+> Then the only the Pokémon who match what is typed will appear
